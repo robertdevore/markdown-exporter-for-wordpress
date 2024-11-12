@@ -1,0 +1,55 @@
+#progress-bar-container {
+    position: relative;
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+#progress-bar {
+    height: 20px;
+    width: 0%;
+    background-color: #4caf50;
+    border-radius: 25px 0 0 25px;
+    transition: width 0.4s ease;
+}
+
+#progress-text {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    color: #fff;
+    font-weight: bold;
+    z-index: 1;
+}
+
+#export-log-wrapper {
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    padding: 15px;
+    border-radius: 5px;
+    max-height: 400px;
+    overflow-y: auto;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+}
+
+#export-log {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+#markdown-exporter-support-btn,
+#markdown-exporter-docs-btn {
+    line-height: 22px;
+    float: right;
+    margin-left: 12px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    gap: 6;
+}
