@@ -574,6 +574,11 @@ class Markdown_Exporter {
         $indentation = str_repeat( '  ', $indent );
 
         foreach ( $array as $key => $value ) {
+            if ( is_object( $value ) ) {
+                // Skip meta values that are encoded as complicated objects
+                continue;
+            }
+            
             // Replace spaces with underscores in keys to avoid YAML issues.
             $key = str_replace( ' ', '_', $key );
 
