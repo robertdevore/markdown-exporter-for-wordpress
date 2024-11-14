@@ -623,6 +623,12 @@ class Markdown_Exporter {
      * @return string The escaped string.
      */
     private function escape_yaml_string( $string ) {
+        // Ensure $string is actually a string.
+        if ( ! is_string( $string ) ) {
+            // Convert to string.
+            $string = (string) $string;
+        }
+
         // If the string contains special characters or starts with a number, enclose it in quotes.
         if ( preg_match( '/[:\-{}\[\],&*#?|\<>=!%@`]/', $string ) || strpos( $string, ' ' ) !== false || is_numeric( $string[0] ) ) {
             // Escape double quotes and backslashes.
