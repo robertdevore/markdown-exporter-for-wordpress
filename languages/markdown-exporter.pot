@@ -1,0 +1,178 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Markdown Exporter for WordPress®\n"
+"POT-Creation-Date: 2024-11-16 23:33-0500\n"
+"PO-Revision-Date: 2024-11-16 23:33-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"X-Generator: Poedit 3.5\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: markdown-exporter.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"X-Poedit-SearchPathExcluded-1: vendor\n"
+
+#: markdown-exporter.php:57
+msgid "Settings"
+msgstr ""
+
+#: markdown-exporter.php:107 markdown-exporter.php:108
+msgid "Markdown Exporter"
+msgstr ""
+
+#: markdown-exporter.php:130
+msgid "Markdown Exporter Settings"
+msgstr ""
+
+#: markdown-exporter.php:132
+msgid "Support"
+msgstr ""
+
+#: markdown-exporter.php:135
+msgid "Documentation"
+msgstr ""
+
+#: markdown-exporter.php:146
+msgid "Export"
+msgstr ""
+
+#: markdown-exporter.php:155
+msgid "Export Log"
+msgstr ""
+
+#: markdown-exporter.php:213
+msgid "Export Options"
+msgstr ""
+
+#: markdown-exporter.php:218
+msgid "Post Types"
+msgstr ""
+
+#: markdown-exporter.php:219
+msgid "Date Range"
+msgstr ""
+
+#: markdown-exporter.php:220
+msgid "Author"
+msgstr ""
+
+#: markdown-exporter.php:221
+msgid "Post Status"
+msgstr ""
+
+#: markdown-exporter.php:222
+msgid "Taxonomies"
+msgstr ""
+
+#: markdown-exporter.php:235
+msgid "Select options for exporting content to Markdown."
+msgstr ""
+
+#: markdown-exporter.php:258
+msgid ""
+"Select specific post types to export. Leave empty to export all public post "
+"types."
+msgstr ""
+
+#: markdown-exporter.php:294
+msgid "All Authors"
+msgstr ""
+
+#: markdown-exporter.php:317
+msgid "All Statuses"
+msgstr ""
+
+#: markdown-exporter.php:393
+msgid "No form data received."
+msgstr ""
+
+#: markdown-exporter.php:400
+msgid "Invalid form data."
+msgstr ""
+
+#: markdown-exporter.php:410
+#, php-format
+msgid "Selected post types: %s."
+msgstr ""
+
+#: markdown-exporter.php:416
+msgid "No post types selected. Exporting all public post types."
+msgstr ""
+
+#: markdown-exporter.php:441
+msgid "No posts found for export."
+msgstr ""
+
+#: markdown-exporter.php:444
+#, php-format
+msgid "Found %d items to export."
+msgstr ""
+
+#: markdown-exporter.php:448
+msgid "ZipArchive class is not available on this server."
+msgstr ""
+
+#: markdown-exporter.php:458
+msgid "Failed to create ZIP file."
+msgstr ""
+
+#: markdown-exporter.php:461
+msgid "Initialized ZIP archive."
+msgstr ""
+
+#: markdown-exporter.php:472
+#, php-format
+msgid "Exporting %s: \"%s\""
+msgstr ""
+
+#: markdown-exporter.php:492
+#, php-format
+msgid "Failed to add \"%s\" to ZIP."
+msgstr ""
+
+#: markdown-exporter.php:499
+msgid "Finalized ZIP archive."
+msgstr ""
+
+#: markdown-exporter.php:515
+#, php-format
+msgid "Export completed: %d items exported in %s seconds."
+msgstr ""
+
+#: markdown-exporter.php:520
+msgid "Export completed successfully."
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Markdown Exporter for WordPress®"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/robertdevore/markdown-exporter-for-wordpress/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Seamlessly convert your WordPress posts, pages, and custom content types "
+"into well-structured Markdown (MD) files. Featuring customizable export "
+"settings, support for Advanced Custom Fields (ACF) and Pods, and a real-time "
+"progress bar for efficient content management."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Robert DeVore"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://robertdevore.com/"
+msgstr ""

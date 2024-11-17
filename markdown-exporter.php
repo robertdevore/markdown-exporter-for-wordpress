@@ -12,7 +12,7 @@
   * Plugin Name: Markdown Exporter for WordPress®
   * Description: Seamlessly convert your WordPress posts, pages, and custom content types into well-structured Markdown (MD) files. Featuring customizable export settings, support for Advanced Custom Fields (ACF) and Pods, and a real-time progress bar for efficient content management.
   * Plugin URI:  https://github.com/robertdevore/markdown-exporter-for-wordpress/
-  * Version:     1.0.0
+  * Version:     1.0.1
   * Author:      Robert DeVore
   * Author URI:  https://robertdevore.com/
   * License:     GPL-2.0+
@@ -39,7 +39,28 @@ $myUpdateChecker = PucFactory::buildUpdateChecker(
 // Set the branch that contains the stable release.
 $myUpdateChecker->setBranch( 'main' );
 
-define( 'MARKDOWN_EXPORTER_VERSION', '1.0.0' );
+define( 'MARKDOWN_EXPORTER_VERSION', '1.0.1' );
+
+// Create variable for settings link filter.
+$plugin_name = plugin_basename( __FILE__ );
+
+/**
+ * Add settings link on plugin page
+ *
+ * @param array $links an array of links related to the plugin.
+ * 
+ * @since  1.0.1
+ * @return array updatead array of links related to the plugin.
+ */
+function markdown_exporter_settings_link( $links ) {
+    // Settings link.
+    $settings_link = '<a href="tools.php?page=markdown-exporter">' . esc_html__( 'Settings', 'markdown-exporter' ) . '</a>';
+    // Add the settings link to the $links array.
+    array_unshift( $links, $settings_link );
+
+    return $links;
+}
+add_filter( "plugin_action_links_$plugin_name", 'markdown_exporter_settings_link' );
 
 /**
  * Class Markdown_Exporter
@@ -628,6 +649,12 @@ class Markdown_Exporter {
      * @return string The escaped string.
      */
     private function escape_yaml_string( $string ) {
+        // Ensure $string is actually a string.
+        if ( ! is_string( $string ) ) {
+            // Convert to string.
+            $string = (string) $string;
+        }
+
         // If the string contains special characters or starts with a number, enclose it in quotes.
         if ( preg_match( '/[:\-{}\[\],&*#?|\<>=!%@`]/', $string ) || strpos( $string, ' ' ) !== false || is_numeric( $string[0] ) ) {
             // Escape double quotes and backslashes.
