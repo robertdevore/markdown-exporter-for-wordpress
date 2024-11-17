@@ -41,6 +41,27 @@ $myUpdateChecker->setBranch( 'main' );
 
 define( 'MARKDOWN_EXPORTER_VERSION', '1.0.0' );
 
+// Create variable for settings link filter.
+$plugin_name = plugin_basename( __FILE__ );
+
+/**
+ * Add settings link on plugin page
+ *
+ * @param array $links an array of links related to the plugin.
+ * 
+ * @since  1.0.1
+ * @return array updatead array of links related to the plugin.
+ */
+function markdown_exporter_settings_link( $links ) {
+    // Settings link.
+    $settings_link = '<a href="tools.php?page=markdown-exporter">' . esc_html__( 'Settings', 'markdown-exporter' ) . '</a>';
+    // Add the settings link to the $links array.
+    array_unshift( $links, $settings_link );
+
+    return $links;
+}
+add_filter( "plugin_action_links_$plugin_name", 'markdown_exporter_settings_link' );
+
 /**
  * Class Markdown_Exporter
  *
