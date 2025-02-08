@@ -12,7 +12,7 @@
   * Plugin Name: Markdown Exporter for WordPress®
   * Description: Seamlessly convert your WordPress posts, pages, and custom content types into well-structured Markdown (MD) files. Featuring customizable export settings, support for Advanced Custom Fields (ACF) and Pods, and a real-time progress bar for efficient content management.
   * Plugin URI:  https://github.com/robertdevore/markdown-exporter-for-wordpress/
-  * Version:     1.0.1
+  * Version:     1.1.0
   * Author:      Robert DeVore
   * Author URI:  https://robertdevore.com/
   * License:     GPL-2.0+
@@ -28,7 +28,7 @@ if ( ! defined( 'WPINC' ) ) {
 }
 
 // Set the plugin version.
-define( 'MARKDOWN_EXPORTER_VERSION', '1.0.1' );
+define( 'MARKDOWN_EXPORTER_VERSION', '1.1.0' );
 
 // Include the class.
 require 'classes/MarkdownExporter.php';
