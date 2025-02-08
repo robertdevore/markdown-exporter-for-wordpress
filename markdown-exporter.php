@@ -54,6 +54,22 @@ new WPComPluginHandler( plugin_basename( __FILE__ ), 'https://robertdevore.com/w
 $plugin_name = plugin_basename( __FILE__ );
 
 /**
+ * Load plugin text domain for translations
+ * 
+ * @since 1.1.0
+ * @return void
+ */
+function mewp_load_textdomain() {
+    load_plugin_textdomain( 
+        'gallery-modals', 
+        false, 
+        dirname( plugin_basename( __FILE__ ) ) . '/languages/'
+    );
+}
+add_action( 'plugins_loaded', 'mewp_load_textdomain' );
+
+
+/**
  * Add settings link on plugin page
  *
  * @param array $links an array of links related to the plugin.
